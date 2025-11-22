@@ -1,14 +1,21 @@
-
 :root{
   --debug-opacity: 0.;
 
   --height-to-width: calc((2002 / 3558) * 100); /* bg image height-to-width ratio as a percentage (EX: 2002 x 3558 px -> 56.26*/
   --element-gap-size: 2.5vw; /* use to adjust how large the gaps between elements is */
+
+    /* --- colors --- */
+  --header-box-color: rgba(30, 30, 30, 1); 
+  --bg-image-overlay: rgba(0, 0, 0, 0.48);
+  --info-box-background: rgba(43, 43, 43, 0.6);
+  --text-color: #FEFFEF;
   
-  /* --- text adjustment --- */
-  color: #FEFFEF;
-  --text-padding: 1rem;
+  /* --- general text adjustment --- */
+  color: var(--text-color);
+  --text-horizontal-padding: 1rem;
+  --text-vertical-padding: 0.7vw;
   font-family: "Verdana", "Tahoma", "Trebuchet MS", sans-serif;
+  font-size: 1.2vw;
 }
 
 .header-text{
@@ -38,7 +45,7 @@
 }
 
 #bg-color-overlay{
-  background-color: rgba(0, 0, 0, 0.48);
+  background-color: var(--bg-image-overlay);
 
   width: calc(100% - 2*var(--element-gap-size));
   height: calc(100% - 2*var(--element-gap-size));
@@ -63,6 +70,9 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 255, 0, var(--debug-opacity));
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--element-gap-size);
 }
 
 #character-portrait{
@@ -77,8 +87,8 @@
 
 #header-box{
   max-width: 100%;
-  background-color: #1E1E1E;
-  padding: var(--text-padding);
+  background-color: var(--header-box-color);
+  padding: var(--text-horizontal-padding);
 }
 
 #title-box{
@@ -91,7 +101,7 @@
 
 #trees-graphic{
   --graphic-width: 0.1; /* percentage of title bar the tree graphic takes up, as a decimal*/
-  margin-right: var(--text-padding);
+  margin-right: var(--text-horizontal-padding);
   background-color: rgba(0, 255, 0, var(--debug-opacity));
   background-image: url("https://tlethanslol.github.io/th_themes/foggy_pines/images/trees.svg");
   background-size: contain;
@@ -109,5 +119,47 @@
 }
 
 #basic-info{
-  padding-top: 0.7vw;
+  padding-top: var(--text-vertical-padding);
+}
+
+#character-details-container{
+  height: 100%;
+  background-color: rgba(0, 0, 255, var(--debug-opacity));
+  display: flex;
+  column-gap: var(--element-gap-size);
+  overflow: hidden;
+}
+
+.info-section{
+  max-height: 100%;
+}
+
+#additional-info{
+  background-color: rgba(255, 0, 0, var(--debug-opacity));
+  width: 40%;
+}
+
+#about{
+  background-color: rgba(0, 255, 0, var(--debug-opacity));
+  width: 100%;
+}
+
+.info-section > .label{
+  background-color: var(--header-box-color);
+}
+
+.info-section div{
+  padding-left: var(--text-horizontal-padding);
+  padding-right: var(--text-horizontal-padding);
+  padding-top: var(--text-vertical-padding);
+  padding-bottom: var(--text-vertical-padding);
+}
+
+.info-section > .box-content{
+  background-color: var(--info-box-background);
+  height: 100%;
+}
+
+#about-text::first-line{
+  font-weight: bold;
 }
