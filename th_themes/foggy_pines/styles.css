@@ -1,14 +1,19 @@
 
 :root{
-  --debug-opacity: 0.2;
+  --debug-opacity: 0.;
 
   --height-to-width: calc((2002 / 3558) * 100); /* bg image height-to-width ratio as a percentage (EX: 2002 x 3558 px -> 56.26*/
-  --element-gap-size: 3vw; /* use to adjust how large the gaps between elements is */
+  --element-gap-size: 2.5vw; /* use to adjust how large the gaps between elements is */
   
   /* --- text adjustment --- */
   color: #FEFFEF;
   --text-padding: 1rem;
   font-family: "Verdana", "Tahoma", "Trebuchet MS", sans-serif;
+}
+
+.header-text{
+  text-transform: uppercase;
+  font-size: 1.4vw;
 }
 
 #background{
@@ -77,11 +82,32 @@
 }
 
 #title-box{
+  border-bottom: 1px solid #FEFFEF;
   max-width: 100%;
+
+  display: flex;
+  justify-content: space-between;
 }
 
-#name{
+#trees-graphic{
+  --graphic-width: 0.1; /* percentage of title bar the tree graphic takes up, as a decimal*/
+  margin-right: var(--text-padding);
+  background-color: rgba(0, 255, 0, var(--debug-opacity));
+  background-image: url("https://tlethanslol.github.io/th_themes/foggy_pines/images/trees.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: calc(var(--graphic-width) * 100%);
+  height: 0;
+  padding-top: calc(((82 / 110) * 100) * var(--graphic-width) * 1%); /* 82/100 = tree graphic height to width ratio) */
+  position: relative;
+}
+
+#character-name{
   max-width: 100%;
-  text-transform: uppercase;
+  font-size: 3vw;
   background-color: rgba(255, 0, 0, var(--debug-opacity));
+}
+
+#basic-info{
+  padding-top: 0.7vw;
 }
