@@ -153,11 +153,48 @@
   padding-right: var(--text-horizontal-padding);
   padding-top: var(--text-vertical-padding);
   padding-bottom: var(--text-vertical-padding);
+  max-width: 100%;
 }
 
 .info-section > .box-content{
   background-color: var(--info-box-background);
   height: 100%;
+}
+
+#banner-image{
+  height: 10%;
+  background-image: url("https://tlethanslol.github.io//th_themes/foggy_pines/images/larchpaw_banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative; top: 0;
+}
+
+#additional-info > .box-content{
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--text-horizontal-padding);
+}
+
+#song{
+  border-top: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+}
+
+#likes-dislikes{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  row-gap: var(--text-horizontal-padding);
+  background-color: rgba(0, 255, 0, var(--debug-opacity));
+  height: 50%
+}
+
+#likes{
+  background-color: rgba(0, 0, 255, var(--debug-opacity));
+}
+
+#dislikes{
+  background-color: rgba(255, 0, 0, var(--debug-opacity));
 }
 
 #about-text::first-line{
