@@ -132,6 +132,8 @@
 
 .info-section{
   max-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 #additional-info{
@@ -199,4 +201,21 @@
 
 #about-text::first-line{
   font-weight: bold;
+}
+
+#about-text{
+  overflow-y: scroll;
+  scrollbar-color: var(--text-color) var(--info-box-background);
+}
+
+.margin{
+  background-color: var(--info-box-background);
+}
+
+#about-top-margin{
+  padding: calc(var(--text-vertical-padding) / 4) !important;
+}
+
+#about-bottom-margin{
+  padding: calc(var(--text-vertical-padding) / 1.5) !important;
 }
