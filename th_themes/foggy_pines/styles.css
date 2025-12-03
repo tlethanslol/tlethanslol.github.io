@@ -105,8 +105,7 @@
   --graphic-width: 0.1; /* percentage of title bar the tree graphic takes up, as a decimal*/
   margin-right: var(--text-horizontal-padding);
   background-color: rgba(0, 255, 0, var(--debug-opacity));
-  /* background-image: url("https://tlethanslol.github.io/th_themes/foggy_pines/images/trees.svg"); */
-  background-image: url("images/trees.svg");
+  background-image: url("https://tlethanslol.github.io/th_themes/foggy_pines/images/trees.svg");
   filter: var(--tree-graphic-color-filter);
   background-size: contain;
   background-repeat: no-repeat;
