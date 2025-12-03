@@ -10,6 +10,7 @@
   --info-box-background: rgba(43, 43, 43, 0.6);
   --text-color: #FEFFEF;
   --scrollbar-color: #FEFFEF;
+  --tree-graphic-color-filter: invert(91%) sepia(13%) saturate(269%) hue-rotate(25deg) brightness(108%) contrast(106%); /* adjusts color of tree graphic. generate filter values at https://codepen.io/sosuke/pen/Pjoqqp */
   
   /* --- general text adjustment --- */
   color: var(--text-color);
@@ -104,7 +105,9 @@
   --graphic-width: 0.1; /* percentage of title bar the tree graphic takes up, as a decimal*/
   margin-right: var(--text-horizontal-padding);
   background-color: rgba(0, 255, 0, var(--debug-opacity));
-  background-image: url("https://tlethanslol.github.io/th_themes/foggy_pines/images/trees.svg");
+  /* background-image: url("https://tlethanslol.github.io/th_themes/foggy_pines/images/trees.svg"); */
+  background-image: url("images/trees.svg");
+  filter: var(--tree-graphic-color-filter);
   background-size: contain;
   background-repeat: no-repeat;
   width: calc(var(--graphic-width) * 100%);
